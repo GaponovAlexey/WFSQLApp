@@ -15,11 +15,53 @@ namespace WFSQLApp
         public LoginForm()
         {
             InitializeComponent();
+
+            this.passField.AutoSize = false;
+            this.passField.Size = new Size(this.passField.Size.Width, 64);
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            this.closeButton.ForeColor = Color.Red;
+        }
+
+        private void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.closeButton.ForeColor = Color.White;
+        }
+
+        Point lastPoint;
+        private void MainPanal_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void MainPanal_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void Autorisation_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void Autorisation_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

@@ -28,49 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.MainPanal = new System.Windows.Forms.Panel();
+            this.passField = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.loginField = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.Autorisation = new System.Windows.Forms.Label();
             this.LoginBut = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.MainPanal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // MainPanal
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(84)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.LoginBut);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 427);
-            this.panel1.TabIndex = 0;
+            this.MainPanal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(84)))));
+            this.MainPanal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MainPanal.Controls.Add(this.passField);
+            this.MainPanal.Controls.Add(this.textBox2);
+            this.MainPanal.Controls.Add(this.pictureBox2);
+            this.MainPanal.Controls.Add(this.loginField);
+            this.MainPanal.Controls.Add(this.pictureBox1);
+            this.MainPanal.Controls.Add(this.panel2);
+            this.MainPanal.Controls.Add(this.LoginBut);
+            this.MainPanal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanal.Location = new System.Drawing.Point(0, 0);
+            this.MainPanal.Margin = new System.Windows.Forms.Padding(2);
+            this.MainPanal.Name = "MainPanal";
+            this.MainPanal.Size = new System.Drawing.Size(343, 427);
+            this.MainPanal.TabIndex = 0;
+            this.MainPanal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPanal_MouseDown);
+            this.MainPanal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainPanal_MouseMove);
             // 
-            // textBox3
+            // passField
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.textBox3.Location = new System.Drawing.Point(80, 198);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 64);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.passField.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.passField.Location = new System.Drawing.Point(80, 198);
+            this.passField.Name = "passField";
+            this.passField.Size = new System.Drawing.Size(247, 53);
+            this.passField.TabIndex = 4;
+            this.passField.UseSystemPasswordChar = true;
             // 
             // textBox2
             // 
@@ -92,14 +93,14 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // loginField
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.textBox1.Location = new System.Drawing.Point(80, 99);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 64);
-            this.textBox1.TabIndex = 2;
+            this.loginField.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.loginField.Location = new System.Drawing.Point(80, 99);
+            this.loginField.Multiline = true;
+            this.loginField.Name = "loginField";
+            this.loginField.Size = new System.Drawing.Size(247, 64);
+            this.loginField.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -141,6 +142,8 @@
             this.closeButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.closeButton.UseMnemonic = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // Autorisation
             // 
@@ -156,6 +159,8 @@
             this.Autorisation.TabIndex = 0;
             this.Autorisation.Text = "Autorisation";
             this.Autorisation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Autorisation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Autorisation_MouseDown);
+            this.Autorisation.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Autorisation_MouseMove);
             // 
             // LoginBut
             // 
@@ -178,13 +183,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 427);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MainPanal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.MainPanal.ResumeLayout(false);
+            this.MainPanal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -195,15 +200,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MainPanal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Autorisation;
         private System.Windows.Forms.Label closeButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox loginField;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button LoginBut;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox passField;
     }
 }
