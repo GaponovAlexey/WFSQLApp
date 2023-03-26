@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,6 +63,36 @@ namespace WFSQLApp
         private void Autorisation_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void LoginBut_Click(object sender, EventArgs e)
+        {
+            String LoginUser = loginField.Text;
+            String PassUser = passField.Text;
+
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `pass` = @uP", db.getConnection());
+
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = LoginUser;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = PassUser;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Yes Autorisation");
+            }
+            else
+            {
+                MessageBox.Show("NOOOO!");
+
+            }
         }
     }
 }
