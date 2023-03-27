@@ -127,7 +127,7 @@
             this.password.Location = new System.Drawing.Point(97, 411);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(247, 53);
-            this.password.TabIndex = 10;
+            this.password.TabIndex = 4;
             this.password.UseSystemPasswordChar = true;
             // 
             // textBox3
@@ -157,7 +157,7 @@
             this.name.Multiline = true;
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(247, 64);
-            this.name.TabIndex = 7;
+            this.name.TabIndex = 2;
             this.name.Enter += new System.EventHandler(this.userNameFieldTwo_Enter);
             this.name.Leave += new System.EventHandler(this.userNameFieldTwo_Leave);
             // 
@@ -168,7 +168,7 @@
             this.surname.Multiline = true;
             this.surname.Name = "surname";
             this.surname.Size = new System.Drawing.Size(247, 64);
-            this.surname.TabIndex = 4;
+            this.surname.TabIndex = 3;
             this.surname.UseSystemPasswordChar = true;
             this.surname.Enter += new System.EventHandler(this.surname_Enter);
             this.surname.Leave += new System.EventHandler(this.surname_Leave);
@@ -180,7 +180,7 @@
             this.Login.Multiline = true;
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(247, 64);
-            this.Login.TabIndex = 2;
+            this.Login.TabIndex = 1;
             this.Login.Enter += new System.EventHandler(this.userNameField_Enter);
             this.Login.Leave += new System.EventHandler(this.userNameField_Leave);
             // 

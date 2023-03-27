@@ -121,6 +121,21 @@ namespace WFSQLApp
         }
         private void registerButton_Click(object sender, EventArgs e)
         {
+            if (name.Text == "FirstName")
+            {
+                MessageBox.Show("write a FirstName");
+                return;
+            }
+
+            if (surname.Text == "LastName")
+            {
+                MessageBox.Show("write a LastName");
+                return;
+            }
+
+            if (isUserExist())
+                return;
+
             DB db = new DB();
             MySqlCommand command;
             command = new MySqlCommand("INSERT INTO `users` (`id` ,`login`, `pass`, `name`, `surname`) VALUES (NULL, @login, @pass, @name, @surname)", db.getConnection());
@@ -142,6 +157,32 @@ namespace WFSQLApp
 
         }
 
+        public Boolean isUserExist()
+        {
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL AND `pass` = @uP", db.getConnection());
+
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = name.Text;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = password.Text;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Login was be created before");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }
