@@ -42,6 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.registerButton = new System.Windows.Forms.Button();
+            this.linkToLogin = new System.Windows.Forms.Label();
             this.MainPanal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,6 +72,7 @@
             // 
             this.MainPanal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(84)))));
             this.MainPanal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MainPanal.Controls.Add(this.linkToLogin);
             this.MainPanal.Controls.Add(this.pictureBox3);
             this.MainPanal.Controls.Add(this.pictureBox2);
             this.MainPanal.Controls.Add(this.pictureBox1);
@@ -234,6 +236,18 @@
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
+            // linkToLogin
+            // 
+            this.linkToLogin.AutoSize = true;
+            this.linkToLogin.Font = new System.Drawing.Font("Broadway", 11F);
+            this.linkToLogin.ForeColor = System.Drawing.Color.Snow;
+            this.linkToLogin.Location = new System.Drawing.Point(164, 618);
+            this.linkToLogin.Name = "linkToLogin";
+            this.linkToLogin.Size = new System.Drawing.Size(63, 17);
+            this.linkToLogin.TabIndex = 14;
+            this.linkToLogin.Text = "Sign In";
+            this.linkToLogin.Click += new System.EventHandler(this.linkToLogin_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,5 +285,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label linkToLogin;
     }
 }

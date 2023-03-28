@@ -33,7 +33,7 @@ namespace WFSQLApp
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         Point lastPoint;
@@ -184,5 +184,11 @@ namespace WFSQLApp
             }
         }
 
+        private void linkToLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm logForm = new LoginForm();
+            logForm.Show();
+        }
     }
 }

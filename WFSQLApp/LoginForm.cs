@@ -23,7 +23,7 @@ namespace WFSQLApp
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void closeButton_MouseEnter(object sender, EventArgs e)
@@ -86,6 +86,9 @@ namespace WFSQLApp
 
             if (table.Rows.Count > 0)
             {
+                this.Hide();
+                MainForm MainForm = new MainForm();
+                MainForm.Show();
                 MessageBox.Show("Yes Autorisation");
             }
             else
@@ -93,6 +96,13 @@ namespace WFSQLApp
                 MessageBox.Show("NOOOO!");
 
             }
+        }
+
+        private void linkRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm regForm = new RegisterForm();
+            regForm.Show();
         }
     }
 }

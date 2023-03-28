@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.MainPanal = new System.Windows.Forms.Panel();
+            this.linkRegister = new System.Windows.Forms.Label();
             this.passField = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@
             // 
             this.MainPanal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(84)))));
             this.MainPanal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MainPanal.Controls.Add(this.linkRegister);
             this.MainPanal.Controls.Add(this.passField);
             this.MainPanal.Controls.Add(this.textBox2);
             this.MainPanal.Controls.Add(this.pictureBox2);
@@ -59,10 +61,22 @@
             this.MainPanal.Location = new System.Drawing.Point(0, 0);
             this.MainPanal.Margin = new System.Windows.Forms.Padding(2);
             this.MainPanal.Name = "MainPanal";
-            this.MainPanal.Size = new System.Drawing.Size(343, 427);
+            this.MainPanal.Size = new System.Drawing.Size(343, 433);
             this.MainPanal.TabIndex = 0;
             this.MainPanal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPanal_MouseDown);
             this.MainPanal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainPanal_MouseMove);
+            // 
+            // linkRegister
+            // 
+            this.linkRegister.AutoSize = true;
+            this.linkRegister.Font = new System.Drawing.Font("Broadway", 11F);
+            this.linkRegister.ForeColor = System.Drawing.Color.Snow;
+            this.linkRegister.Location = new System.Drawing.Point(123, 404);
+            this.linkRegister.Name = "linkRegister";
+            this.linkRegister.Size = new System.Drawing.Size(106, 17);
+            this.linkRegister.TabIndex = 6;
+            this.linkRegister.Text = "Registration";
+            this.linkRegister.Click += new System.EventHandler(this.linkRegister_Click);
             // 
             // passField
             // 
@@ -183,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 427);
+            this.ClientSize = new System.Drawing.Size(343, 433);
             this.Controls.Add(this.MainPanal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -211,5 +225,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button LoginBut;
         private System.Windows.Forms.TextBox passField;
+        private System.Windows.Forms.Label linkRegister;
     }
 }
