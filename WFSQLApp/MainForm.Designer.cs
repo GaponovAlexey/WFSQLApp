@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.Autorisation = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.MainPanal.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -40,6 +41,7 @@
             // 
             this.MainPanal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(49)))), ((int)(((byte)(84)))));
             this.MainPanal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MainPanal.Controls.Add(this.label1);
             this.MainPanal.Controls.Add(this.panel2);
             this.MainPanal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanal.Location = new System.Drawing.Point(0, 0);
@@ -94,6 +96,17 @@
             this.Autorisation.Text = "Program";
             this.Autorisation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Broadway", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(30, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(280, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "you are sign in";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,6 +118,7 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.MainPanal.ResumeLayout(false);
+            this.MainPanal.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -117,5 +131,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label closeButton;
         private System.Windows.Forms.Label Autorisation;
+        private System.Windows.Forms.Label label1;
     }
 }
